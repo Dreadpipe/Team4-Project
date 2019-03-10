@@ -1,4 +1,4 @@
-# Team4-Project
+# Team4-PokeMania
 Team Four Project One!  Let's do the damn thing
 
 Team Four:
