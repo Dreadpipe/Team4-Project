@@ -2,7 +2,7 @@
 
 
 
-    // Initialize Firebase
+    // Initialize PokeMania Firebase!  It's super effective!
     var config = {
         apiKey: "AIzaSyBQn2tp8-NXzhWu5hcG8kxS6MAGDLkoCNE",
         authDomain: "pokemania.firebaseapp.com",
