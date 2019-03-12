@@ -9,7 +9,9 @@ Team Four:
 
 PokeMania (Rev 0)
 
-3/9/16 - Initial commit
+3/11/19 - Second commit, tasks deligated
+
+3/9/19 - Initial commit
     adding index.html, js/css/assets folders/files
     adding meta data, bootstrap, jQuery, Firebase, normalize.css
 
