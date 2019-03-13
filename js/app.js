@@ -35,8 +35,10 @@ function Pokemans() {
     .then(function(response) {
 
         let results = response.sprites.front_default;
-        console.log(results)
+        console.log(results);
 
+        let pokeImage = $("<img>").attr("src", results);
+        $(".result").append(pokeImage);
         
     })  
 
