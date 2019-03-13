@@ -37,6 +37,7 @@ function Pokemans() {
         let results = response.sprites.front_default;
         console.log(results)
 
+        
     })  
 
 };

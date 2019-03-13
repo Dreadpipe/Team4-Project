@@ -37,6 +37,7 @@ body
 {
     display: table;
     width: 100%;
+    
 }
 
 .td
@@ -53,6 +54,7 @@ input, button
     margin: 0;
     border: 0;
     background-color: transparent;
+   
 }
 
 #cover
@@ -67,11 +69,13 @@ input, button
     background-color: #ff7575;
     border-radius: 20px;
     box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
+    
 }
 
 form
 {
     height: 96px;
+    
 }
 
 input[type="text"]
@@ -80,17 +84,21 @@ input[type="text"]
     height: 96px;
     font-size: 60px;
     line-height: 1;
+    
+    
 }
 
 input[type="text"]::placeholder
 {
     color: #e16868;
+    
 }
 
 #s-cover
 {
     width: 1px;
     padding-left: 35px;
+    
 }
 
 button
@@ -100,8 +108,18 @@ button
     width: 84px;
     height: 96px;
     cursor: pointer;
+  
+
 }
 
+#random-button
+{
+    height: 70px;
+    width: 500px;
+    margin-left: 470px;
+    margin-top: 350px;
+
+}
 #s-circle
 {
     position: relative;
@@ -129,6 +147,7 @@ button span
     border-radius: 10px;
     transform: rotateZ(52deg);
     transition: 0.5s ease all;
+    
 }
 
 button span:before, button span:after
@@ -193,3 +212,4 @@ footer{
     position: absolute;
     bottom: 0;
   }
+

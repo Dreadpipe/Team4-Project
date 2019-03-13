@@ -1,0 +1,18 @@
+body
+{
+    background-image: url("../assets/images/pokedex_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    
+}
+
+.result
+{
+    background: blue;
+    height: 240px;
+    width: 495px;
+    padding: 30px;
+    margin-top: 215px;
+    margin-left: 110px;
+}
