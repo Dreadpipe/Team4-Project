@@ -24,25 +24,32 @@ function Pokemans() {
 
     //  Pokemon variable will need to be associated with grabbed HTML
     let pokemon = "articuno";
-    let queryURL = "https://pokeapi.co/api/v2/pokemon-form/" + pokemon
-    
+    let nameURL = "https://pokeapi.co/api/v2/pokemon/" + pokemon 
+    let pictureURL = "https://pokeapi.co/api/v2/pokemon-form/" + pokemon
 
     $.ajax({
-        url: queryURL,
+        url: pictureURL, nameURL,
         method: "GET"
     })
     
     .then(function(response) {
 
-        let results = response.sprites.front_default;
-        console.log(results);
 
-        let pokeImage = $("<img>").attr("src", results);
+        // name response from API, then appending name into result-name
+        let name = response.name;
+        console.log(name);
+
+        let pokeName = $(".result-name").append(name);
+
+        // picture response from API, then appending into a img
+        let picture = response.sprites.front_default;
+        console.log(picture);
+
+        let pokeImage = $("<img>").attr("src", picture);
         $(".result").append(pokeImage);
-        
+
     })  
 
 };
 
 Pokemans();
-    
