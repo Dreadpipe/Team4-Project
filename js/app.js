@@ -45,7 +45,7 @@ function Pokemans() {
         let picture = response.sprites.front_default;
         console.log(picture);
 
-        let pokeImage = $("<img>").attr("src", picture);
+        let pokeImage = $("<img id=pokeImage>").attr("src", picture);
         $(".result").append(pokeImage);
 
     })  

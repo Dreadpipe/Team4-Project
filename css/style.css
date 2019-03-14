@@ -50,10 +50,9 @@ input, button
 {
     color: #fff;
     font-family: Nunito;
-    padding: 0;
-    margin: 0;
-    border: 0;
+    border: 0px;
     background-color: transparent;
+    margin-right: 20px;
    
 }
 
@@ -64,7 +63,7 @@ input, button
     left: 0;
     right: 0;
     width: 550px;
-    padding: 35px;
+    padding: 0px;
     margin: -83px auto 0 auto;
     background-color: #ff7575;
     border-radius: 20px;
@@ -81,8 +80,8 @@ form
 input[type="text"]
 {
     width: 100%;
-    height: 96px;
-    font-size: 60px;
+    height: 90px;
+    font-size: 40px;
     line-height: 1;
     
     
