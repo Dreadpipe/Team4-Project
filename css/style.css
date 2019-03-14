@@ -1,13 +1,14 @@
-.jumbotron
- {
+.jumbotron {
+    padding: 0;
     margin: auto;
-    height: 25%;
+    height: 35%;
     background-image: url("../assets/images/PokeMania.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #78c9fa; 
     
 }
+
 
 p {
     text-align: center;
