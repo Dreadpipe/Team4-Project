@@ -213,8 +213,9 @@ footer{
     align-items: center;
     position: absolute;
     bottom: 0;
-  }
-<<<<<<< HEAD
+}
+
+
   @media only screen and (max-width: 568px){
       .jumbotron { 
           width: 100%;
@@ -224,7 +225,3 @@ footer{
       
       
   }
-=======
-
-
->>>>>>> 341ffbb80a0d3037ea43457c96e3332f0178ef55

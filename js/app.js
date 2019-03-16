@@ -47,7 +47,7 @@ function Pokemans() {
         let pokeImage = $("<img id=pokeImage>").attr("src", picture);
         $(".result").append(pokeImage);
 
-        //filter
+        // filter
         // results
     }).then(function(pokemonObject){
         
