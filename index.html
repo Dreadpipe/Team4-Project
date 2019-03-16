@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    
+ 
 
 </head>
 <!--page layout: simple for mobile use, idea have page 1 for pokedex search, page 2 (after page 1 is working) combat-->
@@ -17,6 +19,7 @@
 <!--Need some help with the mobile responsivness, just wanted to get something to start with-->
 
 <body>
+
     <!--jumbotron for pokemon title page to begin with-->
     <div class="container">
         <div class="row">
@@ -27,17 +30,6 @@
         </div>
     </div>
     <!--am I doing this right? Instructions go here-->
-    <div id="instructions">
-        <p>Pikachu ipsum dolor sit amet tentacruel officia ad, clefable aliquip gyrados aliquip kakuna ekans oddish
-            velit lapras seadra onix proident.<br>
-            Aliquip omastar oddish exercitation adipisicing, deserunt labore qui commodo. Voluptate ut et aliqua
-            nidoking, ivysaur pikachu pidgeot omanyte aute et.<br>
-            Cupidatat excepteur wigglytuff culpa quis cillum aute nisi do charmeleon. Commodo aute golem aliquip nulla
-            butterfree. Proident commodo wigglytuff voluptate,<br>
-            quis est vileplume lapras clefairy tentacool staryu hitmonchan. Sed consequat oddish, magikarp ut scyther
-            tauros kabuto.</p>
-    </div>
-
 
 
     <!-- pretty cool looking search button found here: https://www.mockplus.com/blog/post/search-bar-design -->
@@ -46,7 +38,7 @@
             <div id="cover">
                 <form method="get" action="">
                     <div class="tb">
-                        <div class="td"><input type="text" placeholder="Pokedéx" required></div>
+                        <div class="td"><input type="text" placeholder="Search Pokemon" required></div>
                         <div class="td" id="s-cover">
                             <button type="submit">
                                 <div id="s-circle"></div>
@@ -59,12 +51,18 @@
         </div>
     </div>
 
-    
-    <button type="button" class="btn btn-danger">Random</button>
-
+    <button type="button" class="btn btn-danger" id="random-button">Random</button>
 
     <!--add sticky footer with "Team 4 Master Trainers"-->
-    <footer>Team 4 Master Trainers</footer>
+    <footer>
+            <div id="audio">
+                    <audio controls>
+                            <source src="https://ia601207.us.archive.org/25/items/PokemonThemeSong/Pok%C3%A9mon%20Theme%20Song.mp3"/>
+                    </audio>  
+                    </div>
+    </footer>
+
+   
 
 
 
