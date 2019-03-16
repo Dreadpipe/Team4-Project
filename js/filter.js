@@ -3937,7 +3937,8 @@ const data = [
   }
   ]
 // const pokemonWeWant = pokemon
-const pokemonWeWant = 'Bulbasaur';
+const pokemonWeWant = "Bulbasaur"
+console.log(pokemonWeWant)
 
 let stats = {}
 
@@ -3954,6 +3955,7 @@ let matchList = data.filter(function(object){
 
 });
   // variable which stores filtered function
+  // Unnecessary?
   const pokeObject = matchList;
   // shows object stats
   console.log(stats);

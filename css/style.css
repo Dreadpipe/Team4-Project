@@ -215,6 +215,15 @@ footer{
     bottom: 0;
 }
 
+/*graph for main page testing*/
+.chart div {
+    font: 10px sans-serif;
+    background-color:steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
+  }
 
   @media only screen and (max-width: 568px){
       .jumbotron { 
