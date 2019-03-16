@@ -3938,7 +3938,6 @@ const data = [
   ]
 // const pokemonWeWant = pokemon
 const pokemonWeWant = "Bulbasaur"
-console.log(pokemonWeWant)
 
 let stats = {}
 
@@ -3969,5 +3968,6 @@ d3.select(".chart")
     .append("div")
     .style("width", function(d) { return d + "px"; })
     .text(function(d) { return d; });
+
 
 

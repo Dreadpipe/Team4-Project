@@ -14,7 +14,6 @@ $(document).on("click", "#pokemon-input", function(event){
     $("#testDiv").empty();
     // this grabs the user input from the search bar
     let pokemonLower = $("#add-pokemon").val().trim().toLowerCase();
-    pokemonLower[0] = pokemonLower[0].toUpperCase();
     //  Linking Pokemon API here, calling NAME and SPRITE
     let nameURL = "https://pokeapi.co/api/v2/pokemon/" + pokemonLower; 
     let pictureURL = "https://pokeapi.co/api/v2/pokemon-form/" + pokemonLower;
