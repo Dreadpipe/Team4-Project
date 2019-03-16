@@ -41,9 +41,9 @@
             <div id="cover">
                 <form method="get" action="">
                     <div class="tb">
-                        <div class="td"><input type="text" placeholder="Search Pokemon" required></div>
+                        <div class="td"><input id="add-pokemon" type="text" placeholder="Search Pokemon" required></div>
                         <div class="td" id="s-cover">
-                            <button type="submit">
+                            <button id="pokemon-input" type="submit">
                                 <div id="s-circle"></div>
                                 <span></span>
                             </button>
@@ -54,7 +54,12 @@
         </div>
     </div>
 
-    <button type="button" class="btn btn-danger" id="random-button">Random</button>
+    <!--ALERT: Temp div to playtest appending of pokemon, will be removed later!!-->
+    <div id="testDiv" class="result-name result">
+
+    </div>
+    <!--RANDOM BUTTON-->
+    <!--<button type="button" class="btn btn-danger" id="random-button">Random</button>-->
 
     <!--add sticky footer with "Team 4 Master Trainers"-->
     <footer>
@@ -65,7 +70,7 @@
                     </div>
     </footer>
 
-   
+
 
 
 
@@ -74,7 +79,7 @@
     <!--jQuery/Ajax-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--Firebase-->
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script> -->
     <!--Bootstrap/jQuery-->
     <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

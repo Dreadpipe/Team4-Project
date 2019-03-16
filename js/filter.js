@@ -1,3 +1,5 @@
+//Ultimate Pokemon Object List
+//Manually pulled from Pogoapi.net - an API which royally sucks
 const data = [
   {
   "base_attack": 118,
@@ -3944,26 +3946,20 @@ let matchList = data.filter(function(object){
         console.log(object.base_attack);
         console.log(object.base_defense);
         console.log(object.base_stamina);
-        stats.attack = object.base_attack
-        stats.defense = object.base_defense
-        stats.stamina = object.base_stamina
+        stats.attack = object.base_attack;
+        stats.defense = object.base_defense;
+        stats.stamina = object.base_stamina;
     };
     // return object.pokemon_name.includes('Char');
 
 });
-
-
-
- const bulbasaurObject = matchList;
-
- console.log(stats);
-
-// return this.base_attack;
-// console.log(this.base_attack);
-
-
-var result = [stats.attack, stats.defense, stats.stamina];
-
+  // variable which stores filtered function
+  const pokeObject = matchList;
+  // shows object stats
+  console.log(stats);
+  // three object results transformed to array
+  var result = [stats.attack, stats.defense, stats.stamina];
+  // creates graph and appends self to new div
 d3.select(".chart")
   .selectAll("div")
   .data(result)
