@@ -21,24 +21,25 @@
 // Currently set up as function to be called for testing purposes
 // Will need to be on-click function that eventually tags to search bar
 function Pokemans() {
-
     //  Pokemon variable will need to be associated with grabbed HTML
-    let pokemon = "articuno";
-    let queryURL = "https://pokeapi.co/api/v2/pokemon-form/" + pokemon
-    
+    const pokemon = "Bulbasaur";
+    const queryURL = "https://pokeapi.co/api/v2/pokemon-form/" + pokemon
+
+    let results;
 
     $.ajax({
         url: queryURL,
         method: "GET"
-    })
-    
-    .then(function(response) {
-
-        let results = response.sprites.front_default;
+    }).then(function(response) {
+        results = response.sprites.front_default;
         console.log(results)
 
-    })  
-
+        //filter
+        // results
+    }).then(function(pokemonObject){
+        
+        console.log(results)
+    });
 };
 
 Pokemans();
