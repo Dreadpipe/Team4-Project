@@ -25,7 +25,7 @@ html, body
     min-height: 100%;
 }
 
-body
+.page1
 {
     margin: 0;
     background-image: url("../assets/images/RetroBackground.jpg");
