@@ -1,6 +1,6 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
-
+<!--Begin the great unification-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style2.css">
     <!--New technology from D3-->
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -22,7 +23,8 @@
 <!--Need some help with the mobile responsivness, just wanted to get something to start with-->
 
 <body>
-
+<!--MEGA DIV, PAGE 1-->
+<div>
     <!--jumbotron for pokemon title page to begin with-->
     <div class="container">
         <div class="row">
@@ -36,7 +38,7 @@
 
 
     <!-- pretty cool looking search button found here: https://www.mockplus.com/blog/post/search-bar-design -->
-    <div class="container">
+    <div class="container search">
         <div class="row">
             <div id="cover">
                 <form method="get" action="">
@@ -55,11 +57,26 @@
     </div>
 
     <!--ALERT: Temp div to playtest appending of pokemon, will be removed later!!-->
-    <div id="testDiv" class="result-name result chart">
+    <!-- <div id="testDiv" class="result-name result chart">
 
-    </div>
+    </div> -->
     <!--RANDOM BUTTON-->
     <!--<button type="button" class="btn btn-danger" id="random-button">Random</button>-->
+    </div>
+<!--PAGE 2 DIV-->
+    <div class="page2 body2">
+        <!--Appends Pokemon name-->
+        <div class="result-name">
+        </div>
+        <button class="btn btn-danger" id="backbtn">BACK
+        </button>
+        <!--Appends Pokemon sprite-->
+        <div class="result">
+        </div>
+        <!--Appends the graph/stats-->
+        <div class="chart">
+        </div>
+    </div>
 
     <!--add sticky footer with "Team 4 Master Trainers"-->
     <footer>
@@ -67,7 +84,7 @@
                     <audio controls>
                             <source src="https://ia601207.us.archive.org/25/items/PokemonThemeSong/Pok%C3%A9mon%20Theme%20Song.mp3"/>
                     </audio>  
-                    </div>
+            </div>
     </footer>
 
     <!--jQuery/Ajax-->
@@ -85,8 +102,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!--PokeApp-->
-    <script src="js/app.js"></script>
-    <script src="js/filter.js"></script>
+    <script src="poketest/pokemon.js"></script>
+    <!-- <script src="js/app.js"></script>
+    <script src="js/filter.js"></script> -->
 </body>
 
 </html>
