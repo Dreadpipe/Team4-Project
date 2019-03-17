@@ -1,4 +1,5 @@
-body
+/*Changing from body element to .body2 class*/
+.body2
 {
     background-image: url("../assets/images/pokedex_bg.gif");
     background-repeat: no-repeat;

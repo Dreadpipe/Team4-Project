@@ -1,7 +1,7 @@
 // jQuery active 
-
-// global variable that stores pokemon
-    let pokemon = "";
+// testing export/import
+// const pokeData = import("../test2/pokemon");
+// console.log(pokeData)
     // makes page load first
     $(document).ready(function() {
 // on click function, or search result thingy goes here 
@@ -13,10 +13,10 @@ $(document).on("click", "#pokemon-input", function(event){
     // temporary DIV - this clears the div on every search
     $("#testDiv").empty();
     // this grabs the user input from the search bar
-    let pokemonLower = $("#add-pokemon").val().trim().toLowerCase();
+    const pokemonLower = $("#add-pokemon").val().trim().toLowerCase();
     //  Linking Pokemon API here, calling NAME and SPRITE
-    let nameURL = "https://pokeapi.co/api/v2/pokemon/" + pokemonLower; 
-    let pictureURL = "https://pokeapi.co/api/v2/pokemon-form/" + pokemonLower;
+    const nameURL = "https://pokeapi.co/api/v2/pokemon/" + pokemonLower; 
+    const pictureURL = "https://pokeapi.co/api/v2/pokemon-form/" + pokemonLower;
 
     $.ajax({
         url: pictureURL, nameURL,
@@ -24,17 +24,14 @@ $(document).on("click", "#pokemon-input", function(event){
     })
     .then(function(response) {
         // name response from API, then appending name into result-name
-        let name = response.name;
-        //NOTE: Trying to get name to return upper case
-        name[0] = name[0].toUpperCase();
-        console.log(name);
+        const name = response.name;
         // let pokeName 
         $(".result-name").append(name);
         // picture response from API, then appending into a img
-        let picture = response.sprites.front_default;
+        const picture = response.sprites.front_default;
         console.log(picture);
         // variable storying jQuery to HTML 
-        let pokeImage = $("<img id=pokeImage>").attr("src", picture);
+        const pokeImage = $("<img id=pokeImage>").attr("src", picture);
         // appends image to .result div
         $(".result").append(pokeImage);
     // ends response function

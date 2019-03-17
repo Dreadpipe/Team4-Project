@@ -3936,13 +3936,22 @@ const data = [
   "pokemon_name": "Melmetal"
   }
   ]
-// const pokemonWeWant = pokemon
-const pokemonWeWant = "Bulbasaur"
+// const pokeNames = [];
+// thanks to my tutor Eddy for the economized for loop
+let pokeNames = data.map(({pokemon_name}) => pokemon_name);
+// for loop that cycles through pokemon_names, pushes to array
+// for (var i = 0; i < data.length; i++) {
+//   pokeNames.push(data[i].pokemon_name)
+// }
+  // const pokemonWeWant = pokemon
+
+const pokemonWeWant = "bulbasaur"
 
 let stats = {}
 
 let matchList = data.filter(function(object){
-    if (object.pokemon_name === pokemonWeWant) {
+  // change pokemonWeWant to pokemonLower from app.js
+    if (object.pokemon_name.toLowerCase() === pokemonWeWant) {
         console.log(object.base_attack);
         console.log(object.base_defense);
         console.log(object.base_stamina);
@@ -3953,9 +3962,9 @@ let matchList = data.filter(function(object){
     // return object.pokemon_name.includes('Char');
 
 });
-  // variable which stores filtered function
-  // Unnecessary?
-  const pokeObject = matchList;
+
+// // jQuery UI auto complete for search bar
+
   // shows object stats
   console.log(stats);
   // three object results transformed to array
@@ -3968,6 +3977,3 @@ d3.select(".chart")
     .append("div")
     .style("width", function(d) { return d + "px"; })
     .text(function(d) { return d; });
-
-
-
