@@ -221,7 +221,7 @@ footer{
     bottom: 0;
 }
 
-/*graph for main page testing*/
+/*CSS for graph that appends stats*/
 .chart div {
     font: 10px sans-serif;
     background-color:steelblue;
@@ -229,14 +229,14 @@ footer{
     padding: 3px;
     margin: 1px;
     color: white;
-  }
+}
 
-  @media only screen and (max-width: 568px){
-      .jumbotron { 
-          width: 100%;
-          align-items: center;
-          
-      }
-      
-      
-  }
+@media only screen and (max-width: 568px){
+    .jumbotron { 
+        width: 100%;
+        align-items: center;
+        
+    }
+    
+    
+}

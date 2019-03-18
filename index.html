@@ -6,23 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PokeMania</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Normalize-->
     <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--8-bit Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!--Front page-->
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <!--Pokedex-->
     <link rel="stylesheet" type="text/css" media="screen" href="css/style2.css">
-    <!--New technology from D3-->
+    <!--New tech Graph Bar from D3-->
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
-    
- 
-
 </head>
-<!--page layout: simple for mobile use, idea have page 1 for pokedex search, page 2 (after page 1 is working) combat-->
-<!--add search and random button-->
-<!--Need some help with the mobile responsivness, just wanted to get something to start with-->
-
 <body>
 <!--MEGA DIV, PAGE 1-->
 <div>
@@ -31,20 +29,17 @@
         <div class="row">
             <div class="col">
                 <div class="jumbotron jumbotron-fluid"></div>
-
             </div>
         </div>
     </div>
-    <!--am I doing this right? Instructions go here-->
-
-
     <!-- pretty cool looking search button found here: https://www.mockplus.com/blog/post/search-bar-design -->
     <div class="container search">
         <div class="row">
             <div id="cover">
                 <form method="get" action="">
                     <div class="tb">
-                        <div class="td"><input id="add-pokemon" class="autocomplete" type="text" style="font-family: 'Press Start 2P', cursive;" placeholder="Choose Your Pokemon!" required></div>
+                        <!--Tags to jQuery, has google fonts-->
+                        <div class="td"><input id="add-pokemon" class="autocomplete" type="text" style="font-family: 'Press Start 2P', cursive;" placeholder="Choose Your Pokemon!" required><div>
                         <div class="td" id="s-cover">
                             <button id="pokemon-input" type="submit">
                                 <div id="s-circle"></div>
@@ -56,19 +51,15 @@
             </div>
         </div>
     </div>
-
-    <!--ALERT: Temp div to playtest appending of pokemon, will be removed later!!-->
-    <!-- <div id="testDiv" class="result-name result chart">
-
-    </div> -->
-    <!--RANDOM BUTTON-->
+    <!--RANDOM BUTTON, add when we're ready-->
     <!--<button type="button" class="btn btn-danger" id="random-button">Random</button>-->
     </div>
-<!--PAGE 2 DIV-->
+    <!--PAGE 2 DIV: The Pokedex-->
     <div class="page2 body2">
         <!--Appends Pokemon name-->
         <div class="result-name">
         </div>
+        <!--Back Button that makes the content disappear-->
         <button class="btn btn-danger" id="backbtn">BACK
         </button>
         <!--Appends Pokemon sprite-->
