@@ -33,6 +33,7 @@
 
 .chart div {
     font: 10px sans-serif;
+    font-family: 'Press Start 2P', cursive;
     background-color:steelblue;
     text-align: right;
     padding: 3px;
