@@ -92,12 +92,12 @@ input[type="text"]
 input[type="text"]::placeholder
 {
     /*color: #e16868;*/
-    /* color: rgb(rgb(233, 221, 221)); */
+    color: rgb(rgb(233, 221, 221));
     color: white;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    /* font-size: 18px;
-    font-size: 1.2rem; */
+    font-size: 18px;
+    font-size: 1.2rem;
     
 }
 
