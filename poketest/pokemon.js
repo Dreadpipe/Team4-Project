@@ -1,4 +1,4 @@
-// test file for pokemon object
+// Ultimate Pokemon List (Big Object, courtesty of pogoapi.net)
 const data = [
     {
     "base_attack": 118,
@@ -3935,13 +3935,17 @@ const data = [
     "pokemon_name": "Melmetal"
     }
     ]
-
+// for loop that stores pokemon names (truncated loop courtesy of my tutor, Eddy)
 // let pokeNames = data.map(({pokemon_name}) => pokemon_name);
 
+// global variable that stores our pokemon's stats
 let stats = {}
 
+// readies the document- we use this to our advantage and hide divs which will append later
 $(document).ready(function() {
+    // hidden pokedex
     $(".page2").hide();
+    // adds class (background image) to body, to be removed at a later time
     $("body").addClass("page1");
 // on click function, or search result thingy goes here 
 // Currently set up as function to be called for testing purposes
@@ -3949,27 +3953,33 @@ $(document).ready(function() {
 $(document).on("click", "#pokemon-input", function(event){
     // prevents page from refreshing
     event.preventDefault();
-    // NEED A "CLEAR" FEATURE
+    // removes body background image
     $("body").removeClass("page1")
+    // hides all page 1 content (yet can't isolate jumbotron/search bar)
     $(".page1").hide("drop", {direction: "down"}, "slow");
+    // hides the jumbotron
     $(".jumbotron").hide();
+    // hides the search bar
     $(".search").hide("drop", {direction: "up"}, "slow");
+    // displays the pokedex
     $(".page2").show("fold", 1000);
+    // jQueryUI solution to z-index; not fully sure if it's doing anything
     $(".page2").addClass("ui-front")
     // this grabs the user input from the search bar
     const pokemonLower = $("#add-pokemon").val().trim().toLowerCase();
-    //  Linking Pokemon API here, calling NAME and SPRITE
+    // Pokemon Name called here
     const nameURL = "https://pokeapi.co/api/v2/pokemon/" + pokemonLower; 
+    // Pokemon Sprite called here
     const pictureURL = "https://pokeapi.co/api/v2/pokemon-form/" + pokemonLower;
-
+    // Ajax ringalinga ding ding to pokeapi.co
     $.ajax({
         url: pictureURL, nameURL,
         method: "GET"
     })
     .then(function(response) {
-        // name response from API, then appending name into result-name
+        // name response from API, then appending name into .result-name
         const name = response.name;
-        // let pokeName 
+        // appends the name
         $(".result-name").append(name);
         // picture response from API, then appending into a img
         const picture = response.sprites.front_default;
@@ -3978,9 +3988,9 @@ $(document).on("click", "#pokemon-input", function(event){
         const pokeImage = $("<img id=pokeImage>").attr("src", picture);
         // appends image to .result div
         $(".result").append(pokeImage);
-
+        // stores a function that searches our object for attack/defense/stamina
         let matchList = data.filter(function(object){
-            // change pokemonWeWant to pokemonLower from app.js
+            // if condition that matches user input and converts to lower case
             if (object.pokemon_name.toLowerCase() === pokemonLower) {
                 console.log(object.base_attack);
                 console.log(object.base_defense);
@@ -3989,9 +3999,9 @@ $(document).on("click", "#pokemon-input", function(event){
                 stats.defense = object.base_defense;
                 stats.stamina = object.base_stamina;
             };
-    
+            // variable that stores all results
             var result = [stats.attack, stats.defense, stats.stamina];
-    
+            // graph chart populated by result variable, appends to DOM
             d3.select(".chart")
             .selectAll("div")
             .data(result)
@@ -4003,23 +4013,30 @@ $(document).on("click", "#pokemon-input", function(event){
     });
     // ends on-click event
     });
-// jQuery UI event that resets the board
+// jQuery UI event that resets the board- needs optimizing
 $(document).on("click", "#backbtn", function(event) {
+    // no page refresh on click
     event.preventDefault();
+    // clears the name
     $(".result-name").empty();
+    // clears the sprite
     $(".result").empty();
+    // clears the graph
     $(".chart").empty();
+    // hides the pokedex with slide jQueryUI function
     $(".page2").hide("drop", {direction: "left"}, "slow");
+    // gives the body a background image
     $("body").addClass("page1");
+    // returns the title/jumbotron
     $(".jumbotron").show();
+    // returns the search bar
     $(".search").show("slide", 1000);
+    // returns all other div nonsense to front page
     $(".page1").show("slide", 1000);
+    // removes page2 z-indexing
     $(".page2").removeClass("ui-front");
 })
-    // ends document ready function
+    // ends on-click function
 });
+// ends document ready function
 });
-// two variables caught by search engine:
-// first variable - to lower case
-// second variable - to upper case
-// if(pokemon['name'].toLowerCase().indexOf(stringInName.toLowerCase()) !== -1)
