@@ -4011,7 +4011,6 @@ $(document).on("click", "#pokemon-input", function(event){
             .style("width", function(d) { return d + "px"; })
             .text(function(d) { return d; });
             };
-
     // ends response function
     });
     // ends on-click event
@@ -4036,6 +4035,7 @@ $(document).on("click", "#backbtn", function(event) {
     $(".search").show("blind", 500);
     // returns all other div nonsense to front page
     $(".page1").show();
+    // returns the footer
     $("footer").show();
     // removes page2 z-indexing
     $(".page2").removeClass("ui-front");
