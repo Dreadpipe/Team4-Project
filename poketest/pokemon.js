@@ -3957,13 +3957,13 @@ $(document).on("click", "#pokemon-input", function(event){
     // removes body background image
     $("body").removeClass("page1")
     // hides all page 1 content (yet can't isolate jumbotron/search bar)
-    $(".page1").hide("drop", {direction: "down"}, "slow");
+    $(".page1").hide("blind");
     // hides the jumbotron
     $(".jumbotron").hide();
     // hides the search bar
-    $(".search").hide("drop", {direction: "up"}, "slow");
+    $(".search").hide("blind");
     // displays the pokedex
-    $(".page2").show("fold", 1000);
+    $(".page2").show("blind");
     // jQueryUI solution to z-index; not fully sure if it's doing anything
     $(".page2").addClass("ui-front")
     // this grabs the user input from the search bar
@@ -4025,15 +4025,17 @@ $(document).on("click", "#backbtn", function(event) {
     // clears the graph
     $(".chart").empty();
     // hides the pokedex with slide jQueryUI function
-    $(".page2").hide("drop", {direction: "left"}, "slow");
+    // BEN: FIND NEW TRANSITION THAT DOESN'T TWEAK
+    // THIS IS YOUR MOST RECENT UPDATE -- THIS LINE HERE
+    $(".page2").hide("blind", "fast");
     // gives the body a background image
     $("body").addClass("page1");
     // returns the title/jumbotron
     $(".jumbotron").show();
     // returns the search bar
-    $(".search").show("slide", 1000);
+    $(".search").show("blind", 500);
     // returns all other div nonsense to front page
-    $(".page1").show("slide", 1000);
+    $(".page1").show();
     // removes page2 z-indexing
     $(".page2").removeClass("ui-front");
 })
