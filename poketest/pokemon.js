@@ -3955,7 +3955,8 @@ $(document).on("click", "#pokemon-input", function(event){
     // prevents page from refreshing
     event.preventDefault();
     // removes body background image
-    $("body").removeClass("page1")
+    $("body").removeClass("page1");
+    $("footer").hide();
     // hides all page 1 content (yet can't isolate jumbotron/search bar)
     $(".page1").hide("blind");
     // hides the jumbotron
@@ -3965,7 +3966,7 @@ $(document).on("click", "#pokemon-input", function(event){
     // displays the pokedex
     $(".page2").show("blind");
     // jQueryUI solution to z-index; not fully sure if it's doing anything
-    $(".page2").addClass("ui-front")
+    $(".page2").addClass("ui-front");
     // this grabs the user input from the search bar
     const pokemonLower = $("#add-pokemon").val().trim().toLowerCase();
     // Pokemon Name called here
@@ -3999,7 +4000,6 @@ $(document).on("click", "#pokemon-input", function(event){
                 stats.attack = object.base_attack;
                 stats.defense = object.base_defense;
                 stats.stamina = object.base_stamina;
-            };
             // variable that stores all results
             var result = [stats.attack, stats.defense, stats.stamina];
             // graph chart populated by result variable, appends to DOM
@@ -4010,6 +4010,8 @@ $(document).on("click", "#pokemon-input", function(event){
             .append("div")
             .style("width", function(d) { return d + "px"; })
             .text(function(d) { return d; });
+            };
+
     // ends response function
     });
     // ends on-click event
@@ -4025,8 +4027,6 @@ $(document).on("click", "#backbtn", function(event) {
     // clears the graph
     $(".chart").empty();
     // hides the pokedex with slide jQueryUI function
-    // BEN: FIND NEW TRANSITION THAT DOESN'T TWEAK
-    // THIS IS YOUR MOST RECENT UPDATE -- THIS LINE HERE
     $(".page2").hide("blind", "fast");
     // gives the body a background image
     $("body").addClass("page1");
@@ -4036,6 +4036,7 @@ $(document).on("click", "#backbtn", function(event) {
     $(".search").show("blind", 500);
     // returns all other div nonsense to front page
     $(".page1").show();
+    $("footer").show();
     // removes page2 z-indexing
     $(".page2").removeClass("ui-front");
 })
