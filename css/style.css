@@ -64,7 +64,8 @@ input, button
     top: 50%;
     left: 0;
     right: 0;
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
     padding: 0px;
     margin: -83px auto 0 auto;
     background-color: #ff7575;
@@ -230,12 +231,29 @@ footer{
     margin: 1px;
     color: white;
 }
+#add-pokemon{
+    font-family: 'Press Start 2P', cursive;
+}
+
 
 @media only screen and (max-width: 568px){
     .jumbotron { 
         width: 100%;
         align-items: center;
+        background-image: url("../assets/images/PokeManiaSmall.png");
         
+        
+    }
+    #add-pokemon{
+        font-size : 14px;
+    }
+    #add-pokemon::placeholder {
+        color: brown;
+        font-size : 8.39px;
+    }
+
+    footer {
+        display: none;
     }
     
     
