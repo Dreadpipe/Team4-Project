@@ -25,11 +25,19 @@
     bottom: 200px;
 }
 
+.result {
+    position: relative; 
+    height: 400px;
+    width: 400px;
+    bottom: 600px;
+    left: 300px;
+}
 #pokeImage {
-    position: relative;
-    height: 40%;
-    width: 30%;
-    left: 200px;
+    
+    height: 100%;
+    width: 100%;
+  
+    
 }
 
 #background {
@@ -71,9 +79,9 @@
     position: relative;
     font: 15px 'Press Start 2P', cursive;
     font-family: 'Press Start 2P', cursive;
-    background-color:red;
+    background-color: darkgrey;
     color: white;
     height: 25%;
     left: 5px;
-    
+    max-width: 200px;
   }
