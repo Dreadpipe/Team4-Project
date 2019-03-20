@@ -1,0 +1,128 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<!--Begin the great unification-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PokeMania</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!--New technology from D3-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    
+ 
+
+</head>
+<!--page layout: simple for mobile use, idea have page 1 for pokedex search, page 2 (after page 1 is working) combat-->
+<!--add search and random button-->
+<!--Need some help with the mobile responsivness, just wanted to get something to start with-->
+
+<body>
+<!--MEGA DIV, PAGE 1-->
+<div>
+    <!--jumbotron for pokemon title page to begin with-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron vertical-center"></div>
+
+            </div>
+        </div>
+    </div>
+    <!--am I doing this right? Instructions go here-->
+
+
+    <!-- pretty cool looking search button found here: https://www.mockplus.com/blog/post/search-bar-design -->
+    <div class="container search">
+        <div class="row">
+            <div id="cover">
+                <form method="get" action="">
+                    <div class="tb">
+                        <div class="td"><input id="add-pokemon"  type="text" placeholder="Choose your Pokémon!" required></div>
+                        <div class="td" id="s-cover">
+                            <button id="pokemon-input" type="submit">
+                                <div id="s-circle"></div>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--ALERT: Temp div to playtest appending of pokemon, will be removed later!!-->
+    <!-- <div id="testDiv" class="result-name result chart">
+    </div> -->
+    <!--RANDOM BUTTON-->
+    <!--<button type="button" class="btn btn-danger" id="random-button">Random</button>-->
+    </div>
+<!--PAGE 2 DIV-->
+    <div class="page2 body2">
+        <!--Appends random button-->
+        <button class="btn btn-danger" id="backbtn">BACK
+        </button>
+
+        <!--Appends the graph/stats-->
+        <div class="container" id=background>
+            <div class="row">
+                <div class="col" id=attack>ATTACK: 
+                    </div>
+                <div  id=defense>DEFENSE: 
+                    </div>
+                <div  id=stamina>STAMINA: 
+                    </div>
+                <div class="chart">
+                    </div>
+            </div>
+        </div>
+
+        <!--Appends Pokemon name-->
+        <div class="result-name">
+        </div>
+            </div>
+            
+        <!--Appends Pokemon sprite-->
+        <div class="result">
+        </div>
+
+    </div>
+
+    <!--add sticky footer with "Team 4 Master Trainers"-->
+    <footer>
+        
+            <div id="audio">
+                    <audio controls>
+                            <source src="https://ia601207.us.archive.org/25/items/PokemonThemeSong/Pok%C3%A9mon%20Theme%20Song.mp3"/>
+                    </audio>  
+            </div>
+           
+    </footer>
+
+    <!--jQuery/Ajax-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--Firebase-->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script> -->
+    <!--Bootstrap/jQuery-->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--PokeApp-->
+    <script src="poketest/pokemon.js"></script>
+    <!-- <script src="js/app.js"></script>
+    <script src="js/filter.js"></script> -->
+</body>
+
+</html>

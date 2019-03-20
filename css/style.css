@@ -1,0 +1,304 @@
+.jumbotron {
+    padding: 0;
+    margin: auto;
+    height: 35%;
+    background-image: url("../assets/images/PokeMania.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #78c9fa; 
+    
+}
+
+
+p {
+    text-align: center;
+  }
+
+*
+{
+    outline: none;
+}
+
+html, body
+{
+    height: 100%;
+    min-height: 100%;
+}
+
+.page1
+{
+    margin: 0;
+    background-image: url("../assets/images/RetroBackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.tb
+{
+    display: table;
+    width: 100%;
+    
+}
+
+.td
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+input, button
+{
+    color: #fff;
+    font-family: Nunito;
+    border: 0px;
+    background-color: transparent;
+    margin-right: 20px;
+    margin-left: 20px;
+   
+}
+
+#cover
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 550px;
+    padding: 0px;
+    margin: -83px auto 0 auto;
+    background-color: #ff7575;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
+    
+}
+
+form
+{
+    height: 96px;
+    
+}
+
+input[type="text"]
+{
+    width: 100%;
+    height: 90px;
+    font-size: 40px;
+    line-height: 1;
+    
+    
+}
+
+input[type="text"]::placeholder
+{
+    /*color: #e16868;*/
+    color: rgb(rgb(233, 221, 221));
+    color: white;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    font-size: 1.2rem;
+    
+}
+
+#s-cover
+{
+    width: 1px;
+    padding-left: 35px;
+    
+}
+
+button
+{
+    position: relative;
+    display: block;
+    width: 84px;
+    height: 96px;
+    cursor: pointer;
+  
+
+}
+
+#random-button
+{
+    height: 70px;
+    width: 500px;
+    margin-left: 470px;
+    margin-top: 350px;
+
+}
+#s-circle
+{
+    position: relative;
+    top: -8px;
+    left: 0;
+    width: 43px;
+    height: 43px;
+    margin-top: 0;
+    border-width: 15px;
+    border: 15px solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+}
+
+button span
+{
+    position: absolute;
+    top: 68px;
+    left: 43px;
+    display: block;
+    width: 45px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+    
+}
+
+button span:before, button span:after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle
+{
+    top: -1px;
+    width: 67px;
+    height: 15px;
+    border-width: 0;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+#s-cover:hover span
+{
+    top: 50%;
+    left: 56px;
+    width: 25px;
+    margin-top: -9px;
+    transform: rotateZ(0);
+}
+
+#s-cover:hover button span:before
+{
+    bottom: 11px;
+    transform: rotateZ(52deg);
+}
+
+#s-cover:hover button span:after
+{
+    bottom: -11px;
+    transform: rotateZ(-52deg);
+}
+#s-cover:hover button span:before, #s-cover:hover button span:after
+{
+    right: -6px;
+    width: 40px;
+    background-color: #fff;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+/*CSS for graph that appends stats*/
+.chart div {
+    font: 10px sans-serif;
+    background-color:steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
+}
+#add-pokemon{
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+@media only screen and (max-width: 568px){
+    .jumbotron { 
+        width: 100%;
+        align-items: center;
+        background-image: url("../assets/images/PokeManiaSmall.png");
+        
+        
+    }
+    #add-pokemon{
+        font-size : 14px;
+    }
+    #add-pokemon::placeholder {
+        color: brown;
+        font-size : 8.39px;
+    }
+
+    footer {
+        display: none;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 768px ){ 
+    .jumbotron { 
+        width: 100%;
+        align-items: center;
+        background-image: url("../assets/images/PokeMania.png");
+        
+        
+    }
+    #add-pokemon{
+        font-size : 20px;
+    }
+    #add-pokemon::placeholder {
+        color: brown;
+        font-size : 18px;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 375px){
+    .jumbotron { 
+        width: 100%;
+        align-items: center;
+        background-image: url("../assets/images/PokeManiaSmall.png");
+        
+        
+    }
+    #add-pokemon{
+        font-size : 11px;
+    }
+    #add-pokemon::placeholder {
+        color: brown;
+        font-size : 10.6px;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
