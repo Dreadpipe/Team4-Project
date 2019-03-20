@@ -258,3 +258,47 @@ footer{
     
     
 }
+
+@media only screen and (max-width: 768px ){ 
+    .jumbotron { 
+        width: 100%;
+        align-items: center;
+        background-image: url("../assets/images/PokeMania.png");
+        
+        
+    }
+    #add-pokemon{
+        font-size : 20px;
+    }
+    #add-pokemon::placeholder {
+        color: brown;
+        font-size : 18px;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 375px){
+    .jumbotron { 
+        width: 100%;
+        align-items: center;
+        background-image: url("../assets/images/PokeManiaSmall.png");
+        
+        
+    }
+    #add-pokemon{
+        font-size : 11px;
+    }
+    #add-pokemon::placeholder {
+        color: brown;
+        font-size : 10.6px;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
