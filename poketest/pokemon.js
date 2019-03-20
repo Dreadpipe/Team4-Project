@@ -3973,12 +3973,23 @@ $(document).on("click", "#pokemon-input", function(event){
     const nameURL = "https://pokeapi.co/api/v2/pokemon/" + pokemonLower; 
     // Pokemon Sprite called here
     const pictureURL = "https://pokeapi.co/api/v2/pokemon-form/" + pokemonLower;
+    const flavURL = "https://pokeapi.co/api/v2/pokemon-species/" + pokemonLower;
+    console.log(flavURL);
     // Ajax ringalinga ding ding to pokeapi.co
     $.ajax({
         url: pictureURL, nameURL,
         method: "GET"
     })
     .then(function(response) {
+        $.ajax({
+            url: flavURL,
+            method: "GET"
+        })
+        .then(function(response2){
+            const flav = response2.flavor_text_entries[1].flavor_text;
+            console.log(flav);
+            $("#pokeFlav").text(flav);
+        })
         // name response from API, then appending name into .result-name
         const name = response.name;
         // appends the name
@@ -3991,6 +4002,8 @@ $(document).on("click", "#pokemon-input", function(event){
         // appends image to .result div
         $(".result").append(pokeImage);
         // stores a function that searches our object for attack/defense/stamina
+        const flav = response.flavor_text_entries[1].flavor_text;
+        console.log(flav);
         let matchList = data.filter(function(object){
             // if condition that matches user input and converts to lower case
             if (object.pokemon_name.toLowerCase() === pokemonLower) {
